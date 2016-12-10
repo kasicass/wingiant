@@ -12,6 +12,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThreadTest", "Tests\ThreadT
 		{18DAF650-04D9-495D-8819-C040798426F0} = {18DAF650-04D9-495D-8819-C040798426F0}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThreadQueueTest", "Tests\ThreadQueueTest.vcxproj", "{9E86D5E1-AE20-4BC6-9258-D8C332CDCD42}"
+	ProjectSection(ProjectDependencies) = postProject
+		{18DAF650-04D9-495D-8819-C040798426F0} = {18DAF650-04D9-495D-8819-C040798426F0}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -26,6 +31,10 @@ Global
 		{9B82A5BF-264E-45B7-98C3-CAE900417930}.Debug|Win32.Build.0 = Debug|Win32
 		{9B82A5BF-264E-45B7-98C3-CAE900417930}.Release|Win32.ActiveCfg = Release|Win32
 		{9B82A5BF-264E-45B7-98C3-CAE900417930}.Release|Win32.Build.0 = Release|Win32
+		{9E86D5E1-AE20-4BC6-9258-D8C332CDCD42}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9E86D5E1-AE20-4BC6-9258-D8C332CDCD42}.Debug|Win32.Build.0 = Debug|Win32
+		{9E86D5E1-AE20-4BC6-9258-D8C332CDCD42}.Release|Win32.ActiveCfg = Release|Win32
+		{9E86D5E1-AE20-4BC6-9258-D8C332CDCD42}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -33,5 +42,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{18DAF650-04D9-495D-8819-C040798426F0} = {D46113E3-CA39-4721-8272-18843031CB9B}
 		{9B82A5BF-264E-45B7-98C3-CAE900417930} = {2A38CC5F-A303-47C2-B56E-785F234CF690}
+		{9E86D5E1-AE20-4BC6-9258-D8C332CDCD42} = {2A38CC5F-A303-47C2-B56E-785F234CF690}
 	EndGlobalSection
 EndGlobal

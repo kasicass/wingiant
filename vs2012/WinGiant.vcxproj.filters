@@ -9,11 +9,26 @@
     <ClCompile Include="..\src\WinGiant\OS\Thread.cpp">
       <Filter>OS</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\WinGiant\OS\Mutex.cpp">
+      <Filter>OS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGiant\OS\Semaphore.cpp">
+      <Filter>OS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\WinGiant\OS\Thread.hpp">
       <Filter>OS</Filter>
     </ClInclude>
     <ClInclude Include="..\src\WinGiant\All.hpp" />
+    <ClInclude Include="..\src\WinGiant\OS\Mutex.hpp">
+      <Filter>OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGiant\OS\Semaphore.hpp">
+      <Filter>OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGiant\OS\ThreadQueue.hpp">
+      <Filter>OS</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
