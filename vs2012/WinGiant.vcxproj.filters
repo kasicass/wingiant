@@ -4,6 +4,9 @@
     <Filter Include="OS">
       <UniqueIdentifier>{1421172f-4ba8-4fd1-a267-95af54235224}</UniqueIdentifier>
     </Filter>
+    <Filter Include="UTIL">
+      <UniqueIdentifier>{22c0363f-cc2b-48ea-bdb8-634c801b6293}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\WinGiant\OS\Thread.cpp">
@@ -14,6 +17,9 @@
     </ClCompile>
     <ClCompile Include="..\src\WinGiant\OS\Semaphore.cpp">
       <Filter>OS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGiant\UTIL\RunOnce.cpp">
+      <Filter>UTIL</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -29,6 +35,9 @@
     </ClInclude>
     <ClInclude Include="..\src\WinGiant\OS\ThreadQueue.hpp">
       <Filter>OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGiant\UTIL\RunOnce.hpp">
+      <Filter>UTIL</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
