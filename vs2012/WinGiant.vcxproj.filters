@@ -21,6 +21,9 @@
     <ClCompile Include="..\src\WinGiant\UTIL\RunOnce.cpp">
       <Filter>UTIL</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\WinGiant\UTIL\Log.cpp">
+      <Filter>UTIL</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\WinGiant\OS\Thread.hpp">
@@ -37,6 +40,9 @@
       <Filter>OS</Filter>
     </ClInclude>
     <ClInclude Include="..\src\WinGiant\UTIL\RunOnce.hpp">
+      <Filter>UTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGiant\UTIL\Log.hpp">
       <Filter>UTIL</Filter>
     </ClInclude>
   </ItemGroup>
