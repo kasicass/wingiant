@@ -27,3 +27,13 @@
 *.exe
 *.out
 *.app
+
+# VisualStudio Files
+*.opensdf
+*.sdf
+*.user
+*.suo
+ipch
+bin
+build
+

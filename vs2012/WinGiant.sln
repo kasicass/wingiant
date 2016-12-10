@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinGiant", "WinGiant.vcxproj", "{18DAF650-04D9-495D-8819-C040798426F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{D46113E3-CA39-4721-8272-18843031CB9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2A38CC5F-A303-47C2-B56E-785F234CF690}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThreadTest", "Tests\ThreadTest.vcxproj", "{9B82A5BF-264E-45B7-98C3-CAE900417930}"
+	ProjectSection(ProjectDependencies) = postProject
+		{18DAF650-04D9-495D-8819-C040798426F0} = {18DAF650-04D9-495D-8819-C040798426F0}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18DAF650-04D9-495D-8819-C040798426F0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{18DAF650-04D9-495D-8819-C040798426F0}.Debug|Win32.Build.0 = Debug|Win32
+		{18DAF650-04D9-495D-8819-C040798426F0}.Release|Win32.ActiveCfg = Release|Win32
+		{18DAF650-04D9-495D-8819-C040798426F0}.Release|Win32.Build.0 = Release|Win32
+		{9B82A5BF-264E-45B7-98C3-CAE900417930}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9B82A5BF-264E-45B7-98C3-CAE900417930}.Debug|Win32.Build.0 = Debug|Win32
+		{9B82A5BF-264E-45B7-98C3-CAE900417930}.Release|Win32.ActiveCfg = Release|Win32
+		{9B82A5BF-264E-45B7-98C3-CAE900417930}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{18DAF650-04D9-495D-8819-C040798426F0} = {D46113E3-CA39-4721-8272-18843031CB9B}
+		{9B82A5BF-264E-45B7-98C3-CAE900417930} = {2A38CC5F-A303-47C2-B56E-785F234CF690}
+	EndGlobalSection
+EndGlobal
