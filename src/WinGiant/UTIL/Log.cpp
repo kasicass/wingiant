@@ -111,7 +111,7 @@ void LogThread::workFunc()
 
 		case CMD_LOG:
 			n = strlen(d.buf);
-			if (d.flags & GIANT_LOG_FILE) { fwrite(d.buf, n, 1, fp); fflush(fp); }
+			if ((d.flags & GIANT_LOG_FILE) && fp) { fwrite(d.buf, n, 1, fp); fflush(fp); }
 			if (d.flags & GIANT_LOG_DBGVIEW) OutputDebugStringA(d.buf);
 			if (d.flags & GIANT_LOG_STDOUT) fputs(d.buf, stdout);
 			free(d.buf);
@@ -136,8 +136,6 @@ static void shutdown()
 
 void init(const char* logFile, int flags)
 {
-	assert((flags & GIANT_LOG_FILE) && strlen(logFile) > 0);
-
 	logThr.start(logFile, flags);
 	atexit(shutdown);
 }

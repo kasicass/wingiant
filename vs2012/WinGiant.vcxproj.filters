@@ -7,6 +7,9 @@
     <Filter Include="UTIL">
       <UniqueIdentifier>{22c0363f-cc2b-48ea-bdb8-634c801b6293}</UniqueIdentifier>
     </Filter>
+    <Filter Include="IPC">
+      <UniqueIdentifier>{d562bed7-ba9e-4176-ae4b-2995cb033d36}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\WinGiant\OS\Thread.cpp">
@@ -23,6 +26,21 @@
     </ClCompile>
     <ClCompile Include="..\src\WinGiant\UTIL\Log.cpp">
       <Filter>UTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGiant\IPC\Message.cpp">
+      <Filter>IPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGiant\IPC\Pub.cpp">
+      <Filter>IPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGiant\IPC\Sub.cpp">
+      <Filter>IPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGiant\OS\NonblockingPipeClient.cpp">
+      <Filter>OS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGiant\OS\NonblockingPipeServer.cpp">
+      <Filter>OS</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -44,6 +62,21 @@
     </ClInclude>
     <ClInclude Include="..\src\WinGiant\UTIL\Log.hpp">
       <Filter>UTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGiant\IPC\Message.hpp">
+      <Filter>IPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGiant\IPC\Pub.hpp">
+      <Filter>IPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGiant\IPC\Sub.hpp">
+      <Filter>IPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGiant\OS\NonblockingPipeClient.hpp">
+      <Filter>OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGiant\OS\NonblockingPipeServer.hpp">
+      <Filter>OS</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
