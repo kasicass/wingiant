@@ -12,7 +12,8 @@ int main()
 		return -1;
 	}
 
-	bool ok = pub.send("Hello", 6);
+	char data[] = "Hello";
+	bool ok = pub.send(data, strlen(data));
 	printf("send: %d\n", ok);
 	return 0;
 }

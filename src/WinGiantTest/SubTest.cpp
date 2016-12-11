@@ -18,7 +18,12 @@ int main()
 		IPC::Message msg;
 		if (sub.recv(&msg))
 		{
-			printf("recv: %s, %u\n", msg.data(), msg.length());
+			char *tmp = (char*)malloc(msg.length()+1);
+			memcpy(tmp, msg.data(), msg.length());
+			tmp[msg.length()] = '\0';
+
+			printf("recv: %s\n", tmp);
+			free(tmp);
 		}
 		else
 		{
