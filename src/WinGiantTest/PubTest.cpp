@@ -1,4 +1,4 @@
-#include "WinGiant/All.hpp"
+﻿#include "WinGiant/All.hpp"
 using namespace WinGiant;
 
 int main()
@@ -15,5 +15,11 @@ int main()
 	char data[] = "Hello";
 	bool ok = pub.send(data, strlen(data));
 	printf("send: %d\n", ok);
+
+	// pub.send() 第二次会失败，因为 NonblockingPipeServer 收到一次消息后，就会 close pipe
+	char data2[] = "Hello2";
+	ok = pub.send(data2, strlen(data2));
+	printf("send: %d, %u\n", ok, GetLastError());
+	
 	return 0;
 }
