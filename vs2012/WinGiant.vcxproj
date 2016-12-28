@@ -14,6 +14,11 @@
     <ClCompile Include="..\src\WinGiant\IPC\Message.cpp" />
     <ClCompile Include="..\src\WinGiant\IPC\Pub.cpp" />
     <ClCompile Include="..\src\WinGiant\IPC\Sub.cpp" />
+    <ClCompile Include="..\src\WinGiant\MSGPACK\src\objectc.c" />
+    <ClCompile Include="..\src\WinGiant\MSGPACK\src\unpack.c" />
+    <ClCompile Include="..\src\WinGiant\MSGPACK\src\version.c" />
+    <ClCompile Include="..\src\WinGiant\MSGPACK\src\vrefbuffer.c" />
+    <ClCompile Include="..\src\WinGiant\MSGPACK\src\zone.c" />
     <ClCompile Include="..\src\WinGiant\OS\Mutex.cpp" />
     <ClCompile Include="..\src\WinGiant\OS\NonblockingPipeClient.cpp" />
     <ClCompile Include="..\src\WinGiant\OS\NonblockingPipeServer.cpp" />
@@ -27,6 +32,8 @@
     <ClInclude Include="..\src\WinGiant\IPC\Message.hpp" />
     <ClInclude Include="..\src\WinGiant\IPC\Pub.hpp" />
     <ClInclude Include="..\src\WinGiant\IPC\Sub.hpp" />
+    <ClInclude Include="..\src\WinGiant\MSGPACK\include\msgpack.h" />
+    <ClInclude Include="..\src\WinGiant\MSGPACK\include\msgpack.hpp" />
     <ClInclude Include="..\src\WinGiant\OS\Mutex.hpp" />
     <ClInclude Include="..\src\WinGiant\OS\NonblockingPipeClient.hpp" />
     <ClInclude Include="..\src\WinGiant\OS\NonblockingPipeServer.hpp" />

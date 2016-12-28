@@ -10,6 +10,9 @@
     <Filter Include="IPC">
       <UniqueIdentifier>{d562bed7-ba9e-4176-ae4b-2995cb033d36}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MSGPACK">
+      <UniqueIdentifier>{a5c29447-2eae-4b4f-8d63-f409a4d3af75}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\WinGiant\OS\Thread.cpp">
@@ -41,6 +44,21 @@
     </ClCompile>
     <ClCompile Include="..\src\WinGiant\OS\NonblockingPipeServer.cpp">
       <Filter>OS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGiant\MSGPACK\src\objectc.c">
+      <Filter>MSGPACK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGiant\MSGPACK\src\unpack.c">
+      <Filter>MSGPACK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGiant\MSGPACK\src\version.c">
+      <Filter>MSGPACK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGiant\MSGPACK\src\vrefbuffer.c">
+      <Filter>MSGPACK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGiant\MSGPACK\src\zone.c">
+      <Filter>MSGPACK</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +95,12 @@
     </ClInclude>
     <ClInclude Include="..\src\WinGiant\OS\NonblockingPipeServer.hpp">
       <Filter>OS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGiant\MSGPACK\include\msgpack.h">
+      <Filter>MSGPACK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGiant\MSGPACK\include\msgpack.hpp">
+      <Filter>MSGPACK</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
