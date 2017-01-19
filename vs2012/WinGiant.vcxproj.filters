@@ -13,6 +13,9 @@
     <Filter Include="MSGPACK">
       <UniqueIdentifier>{a5c29447-2eae-4b4f-8d63-f409a4d3af75}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RPC">
+      <UniqueIdentifier>{c2966573-5bad-48b7-bf71-77dcb43825d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\WinGiant\OS\Thread.cpp">
@@ -60,6 +63,12 @@
     <ClCompile Include="..\src\WinGiant\MSGPACK\src\zone.c">
       <Filter>MSGPACK</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\WinGiant\RPC\Call.cpp">
+      <Filter>RPC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGiant\RPC\Service.cpp">
+      <Filter>RPC</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\WinGiant\OS\Thread.hpp">
@@ -101,6 +110,12 @@
     </ClInclude>
     <ClInclude Include="..\src\WinGiant\MSGPACK\include\msgpack.hpp">
       <Filter>MSGPACK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGiant\RPC\Call.hpp">
+      <Filter>RPC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGiant\RPC\Service.hpp">
+      <Filter>RPC</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

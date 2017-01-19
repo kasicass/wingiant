@@ -12,3 +12,6 @@
 
 #include "IPC/Pub.hpp"
 #include "IPC/Sub.hpp"
+
+#include "RPC/Service.hpp"
+#include "RPC/Call.hpp"

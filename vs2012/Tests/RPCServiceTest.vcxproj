@@ -10,57 +10,20 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\src\WinGiant\IPC\Message.cpp" />
-    <ClCompile Include="..\src\WinGiant\IPC\Pub.cpp" />
-    <ClCompile Include="..\src\WinGiant\IPC\Sub.cpp" />
-    <ClCompile Include="..\src\WinGiant\MSGPACK\src\objectc.c" />
-    <ClCompile Include="..\src\WinGiant\MSGPACK\src\unpack.c" />
-    <ClCompile Include="..\src\WinGiant\MSGPACK\src\version.c" />
-    <ClCompile Include="..\src\WinGiant\MSGPACK\src\vrefbuffer.c" />
-    <ClCompile Include="..\src\WinGiant\MSGPACK\src\zone.c" />
-    <ClCompile Include="..\src\WinGiant\OS\Mutex.cpp" />
-    <ClCompile Include="..\src\WinGiant\OS\NonblockingPipeClient.cpp" />
-    <ClCompile Include="..\src\WinGiant\OS\NonblockingPipeServer.cpp" />
-    <ClCompile Include="..\src\WinGiant\OS\Semaphore.cpp" />
-    <ClCompile Include="..\src\WinGiant\OS\Thread.cpp" />
-    <ClCompile Include="..\src\WinGiant\RPC\Call.cpp" />
-    <ClCompile Include="..\src\WinGiant\RPC\Service.cpp" />
-    <ClCompile Include="..\src\WinGiant\UTIL\Log.cpp" />
-    <ClCompile Include="..\src\WinGiant\UTIL\RunOnce.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\src\WinGiant\All.hpp" />
-    <ClInclude Include="..\src\WinGiant\IPC\Message.hpp" />
-    <ClInclude Include="..\src\WinGiant\IPC\Pub.hpp" />
-    <ClInclude Include="..\src\WinGiant\IPC\Sub.hpp" />
-    <ClInclude Include="..\src\WinGiant\MSGPACK\include\msgpack.h" />
-    <ClInclude Include="..\src\WinGiant\MSGPACK\include\msgpack.hpp" />
-    <ClInclude Include="..\src\WinGiant\OS\Mutex.hpp" />
-    <ClInclude Include="..\src\WinGiant\OS\NonblockingPipeClient.hpp" />
-    <ClInclude Include="..\src\WinGiant\OS\NonblockingPipeServer.hpp" />
-    <ClInclude Include="..\src\WinGiant\OS\Semaphore.hpp" />
-    <ClInclude Include="..\src\WinGiant\OS\Thread.hpp" />
-    <ClInclude Include="..\src\WinGiant\OS\ThreadQueue.hpp" />
-    <ClInclude Include="..\src\WinGiant\RPC\Call.hpp" />
-    <ClInclude Include="..\src\WinGiant\RPC\Service.hpp" />
-    <ClInclude Include="..\src\WinGiant\UTIL\Log.hpp" />
-    <ClInclude Include="..\src\WinGiant\UTIL\RunOnce.hpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{18DAF650-04D9-495D-8819-C040798426F0}</ProjectGuid>
+    <ProjectGuid>{EF56E70B-6AB8-4BB3-ABCE-E31E3EE87BE2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>WinGiant</RootNamespace>
+    <RootNamespace>RPCServiceTest</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v110</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -71,24 +34,29 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="Props\LibDebugBuild.props" />
+    <Import Project="..\Props\ExeDebugBuild.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="Props\LibReleaseBuild.props" />
+    <Import Project="..\Props\ExeReleaseBuild.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -100,15 +68,21 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\WinGiantTest\MyData.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\WinGiantTest\RPCServiceTest.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

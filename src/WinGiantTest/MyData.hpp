@@ -11,3 +11,10 @@ struct MyData
 
 	MSGPACK_DEFINE(s, v, f);
 };
+
+struct MyData2
+{
+	int v;
+
+	MSGPACK_DEFINE(v);
+};
